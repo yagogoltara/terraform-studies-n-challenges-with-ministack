@@ -1,0 +1,14 @@
+delay_seconds             = 0
+environment               = ""
+max_message_size          = 256000 # in Bytes
+message_retention_seconds = 86400  # in Seconds
+project_name              = ""
+region                    = ""
+s3_bucket_name_configs    = ""
+s3_bucket_name_logs       = ""
+sqs_queue_name            = [""]
+tags = {
+  Company    = "",
+  Project    = "",
+  Department = ""
+}
