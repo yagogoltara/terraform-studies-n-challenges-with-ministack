@@ -18,7 +18,7 @@ variable "s3_bucket_name_logs" {
 
 variable "sqs_queue_name" {
   description = "SQS Queue name"
-  type        = string
+  type        = list(string)
   nullable    = false
 }
 
