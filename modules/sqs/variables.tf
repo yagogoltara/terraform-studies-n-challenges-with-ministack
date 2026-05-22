@@ -6,7 +6,7 @@ variable "project_name" {
 
 variable "sqs_queue_name" {
   description = "SQS Queue name"
-  type        = set(string)
+  type        = string
   nullable    = false
 }
 
