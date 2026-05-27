@@ -17,3 +17,16 @@ variable "environment" {
 variable "tags" {
   type = map(string)
 }
+
+variable "pix_queue_names" {
+  type = list(string)
+}
+variable "pix_delay_seconds" {
+  type = number
+}
+variable "pix_message_retention_seconds" {
+  type = number
+}
+variable "pix_max_message_size" {
+  type = number
+}
