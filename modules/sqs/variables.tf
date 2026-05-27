@@ -1,23 +1,5 @@
-variable "project_name" {
-  description = "Project name"
-  type        = string
-  nullable    = false
-}
-
-variable "sqs_queue_name" {
+variable "queue_name" {
   description = "SQS Queue name"
-  type        = string
-  nullable    = false
-}
-
-variable "region" {
-  description = "AWS Region"
-  type        = string
-  nullable    = true
-}
-
-variable "environment" {
-  description = "Environment"
   type        = string
   nullable    = false
 }
@@ -45,4 +27,3 @@ variable "max_message_size" {
   description = "Max message size in bytes"
   nullable    = false
 }
-

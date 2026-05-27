@@ -1,4 +1,7 @@
-output "sqs_queue_arn" {
-  description = "SQS Queue ARN"
-  value       = module.sqs.sqs_queue_name.arn
+output "queue_arn" {
+  value = [for q in module.loan_queues : q.sqs_queue_arn]
+}
+
+output "queue_url" {
+  value = [for q in module.loan_queues : q.sqs_queue_url]
 }

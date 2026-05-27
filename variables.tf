@@ -1,48 +1,19 @@
+variable "loan_queues_config" {
+  type = map(object({
+    delay_seconds     = number
+    retention_seconds = number
+    message_size      = number
+  }))
+}
+
 variable "project_name" {
-  description = "Project name"
-  type        = string
-  nullable    = false
-}
-
-variable "sqs_queue_name" {
-  description = "SQS Queue name"
-  type        = set(string)
-  nullable    = false
-}
-
-variable "region" {
-  description = "AWS Region"
-  type        = string
-  nullable    = true
+  type = string
 }
 
 variable "environment" {
-  description = "Environment"
-  type        = string
-  nullable    = false
+  type = string
 }
 
 variable "tags" {
-  description = "Common tags used by AWS resources"
-  type        = map(string)
-  nullable    = false
+  type = map(string)
 }
-
-variable "delay_seconds" {
-  type        = number
-  description = "Delay seconds for delivering message from SQS Queue"
-  nullable    = false
-}
-
-variable "message_retention_seconds" {
-  type        = number
-  description = "Message retation in seconds"
-  nullable    = false
-}
-
-variable "max_message_size" {
-  type        = number
-  description = "Max message size in bytes"
-  nullable    = false
-}
-
